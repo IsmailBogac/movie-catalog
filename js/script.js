@@ -105,6 +105,27 @@ const createButtons = () => {
   });
 };
 
+const search = document.getElementById('searchInput');
+
+search.addEventListener('keyup',() => {
+    const searchTerm = search.value.toLowerCase();
+
+    const searchedMovies = lister.movieArr.filter((movie) => {
+         return movie.name.toLowerCase().includes(searchTerm);
+    }) ;
+
+    moviesContainer.innerHTML = "";
+    if(searchedMovies.length === 0){
+        alert('Film bulunamadı')
+    }else{   
+        searchedMovies.map((movie) => {
+            moviesContainer.innerHTML += movie.renderAll();
+        })
+    }
+})
+
+
+
 window.addEventListener("DOMContentLoaded", () => {
   lister.movieArr.map((movie) => {
     moviesContainer.innerHTML += movie.renderAll();

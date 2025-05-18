@@ -10,6 +10,9 @@ body {
     line-height: 1.6;
 }
 #moviesContainer {
+    position: absolute;
+    top: 20%;
+    left: 20%;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -65,6 +68,9 @@ body {
     color: wheat;
 }
 #buttonsContainer{
+    position: absolute;
+    top: 15%;
+    left: 35%;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -83,9 +89,11 @@ body {
     transition: 0.4s;
 }
 
-@media (max-width: 768px) {
-    .movie {
-        width: 90%;
-        height: auto;
-    }
+#searchInput{
+    width: 15rem;
+    height: 1.5rem;
+    border-radius: 15px;
+    position: absolute;
+    left: 40%;
+    top: 10%;
 }

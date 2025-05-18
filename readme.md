@@ -1,2 +1,1 @@
-<img src="images/all.png" alt="">
-<img src="images/science.png" alt="">
+<img src="images/readme-gif.mp4" alt="">
