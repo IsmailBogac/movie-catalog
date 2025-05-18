@@ -84,7 +84,7 @@ const createButtons = () => {
     .join("");
   btnContainer.innerHTML = buttons;
 
-    document.querySelectorAll(".btn-item").forEach((btn) => {
+  document.querySelectorAll(".btn-item").forEach((btn) => {
     btn.addEventListener("click", () => {
       const category = btn.dataset.category;
       if (category == "All") {
@@ -92,14 +92,15 @@ const createButtons = () => {
         lister.movieArr.map((movie) => {
           moviesContainer.innerHTML += movie.renderAll();
         });
-        
-      }else{
-        moviesContainer.innerHTML="";
-       const filteredMovies =   lister.movieArr.filter(ctg => ctg.category === category  )
+      } else {
+        moviesContainer.innerHTML = "";
+        const filteredMovies = lister.movieArr.filter(
+          (movie) => movie.category === category
+        );
         filteredMovies.map((movie) => {
-            moviesContainer.innerHTML += movie.renderAll();
-        })
-    }
+          moviesContainer.innerHTML += movie.renderAll();
+        });
+      }
     });
   });
 };
