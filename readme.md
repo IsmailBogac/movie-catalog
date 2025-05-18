@@ -1,1 +1,1 @@
-<img src="images/readme-gif.mp4" alt="">
+<img src="images/readme-gif.gif" alt="">
